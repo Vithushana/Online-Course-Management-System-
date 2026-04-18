@@ -1,0 +1,24 @@
+{
+  "name": "online-course-management-system",
+  "version": "1.0.0",
+  "description": "Microservices-based Online Course Management System — IT4020 Assignment 2",
+  "scripts": {
+    "start:student": "node services/student-service/index.js",
+    "start:course": "node services/course-service/index.js",
+    "start:enrollment": "node services/enrollment-service/index.js",
+    "start:instructor": "node services/instructor-service/index.js",
+    "start:gateway": "node api-gateway/index.js",
+    "start": "npm-run-all --parallel start:student start:course start:enrollment start:instructor start:gateway"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
